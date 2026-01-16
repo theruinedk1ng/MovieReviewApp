@@ -63,11 +63,18 @@ public class MainWindow {
 
 
         JPanel searchPanel = new JPanel();
-        searchPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5)); // left-aligned, 5px gaps
+        searchPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
         JLabel searchLabel = new JLabel("Enter text to search:");
         JTextField searchField = new JTextField();
         searchField.setPreferredSize(new Dimension(200, 25));
+
+        searchPanel.add(searchLabel);
+        searchPanel.add(searchField);
+
+        frame.add(searchPanel, BorderLayout.NORTH);
+
+
 
         searchField.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() {
 
